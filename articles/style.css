@@ -1,0 +1,278 @@
+body {
+    background-color: #ffffff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 0 0 60px;
+    margin: 0;
+}
+
+.editor-wrapper,
+.search-page-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.editor-wrapper h1,
+.search-header h1 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.editor-wrapper {
+    background: #ffffff;
+    max-width: 1100px;
+    margin: 32px auto 0;
+    padding: 40px;
+    border: 1px solid #e8e8eb;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Style the custom save button */
+#save-btn {
+    margin-top: 20px;
+    background: #3b6ef6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#save-btn:hover {
+    background: #1f3fae;
+}
+
+/* Style the custom delete button */
+#delete-btn {
+    margin-top: 20px;
+    background: #ff3838;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#delete-btn:hover {
+    background: #f94c4c;
+}
+
+/* Style the custom preview button */
+#preview-btn {
+    margin-top: 20px;
+    background: #07c013;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#preview-btn:hover {
+    background: #18dc25;
+}
+
+/* Download button removed — styles cleaned up */
+/* --- New styles for editor meta fields, back link, status (added during rebuild) --- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #3b6ef6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.editor-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.meta-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 220px;
+}
+
+.meta-field-narrow {
+    flex: 0 0 220px;
+}
+
+.meta-field span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+.meta-field input,
+.meta-field select {
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #d6d6dc;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+.meta-field input:focus,
+.meta-field select:focus {
+    outline: none;
+    border-color: #3b6ef6;
+}
+
+#editor {
+    min-height: 320px;
+    background: #fff;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.editor-status {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+    min-height: 20px;
+}
+
+/* Search page additions */
+.search-page-wrapper {
+    max-width: 1100px;
+    margin: 32px auto 0;
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.search-header h1 {
+    margin: 0;
+}
+
+.search-header-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.generate-link {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #3b6ef6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.generate-link:hover {
+    background: #1f3fae;
+}
+
+.search-bar-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.search-bar-row input[type="search"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #d6d6dc;
+    border-radius: 10px;
+}
+
+.search-bar-row select {
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #d6d6dc;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.article-card {
+    background: #fff;
+    border: 1px solid #e8e8eb;
+    border-radius: 14px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.article-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.article-card-category {
+    display: inline-block;
+    align-self: flex-start;
+    background: #eef4ff;
+    color: #1f3fae;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.article-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.article-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    flex: 1;
+}
+
+.article-card-meta {
+    font-size: 12px;
+    color: #999;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
+
+.loading-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}

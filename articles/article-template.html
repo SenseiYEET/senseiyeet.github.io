@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamify - View Article</title>
+    <link rel="stylesheet" href="../shared/site-nav.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="displayer/displayer-style.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="wrap">
+        <a class="brand" href="../index.html">
+          <img src="../images/Gamify-Logo.png" alt="Gamify logo" />
+          <span>Gamify</span>
+        </a>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search tutorials, articles, topics…"
+          />
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link is-active" href="article-search.html">Articles</a>
+          <a class="nav-link" href="../login-signup/login-page.html">Account</a>
+          <a class="nav-cta" href="../ai-chatbot/index.html">AI Chatbot</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="display-wrapper">
+      <a class="back-link" href="article-search.html"
+        >&larr; Back to articles</a
+      >
+
+      <!--
+        This template holds all sample articles' content inline as plain
+        HTML, one <article> block per id. A tiny script at the bottom reads
+        ?id= from the URL and shows only the matching block. No Firebase,
+        no modules, no network requests — this page works completely
+        offline and can never get stuck "loading".
+      -->
+
+      <article
+        id="dummy-1"
+        class="article-wrapper"
+        data-category="Programming"
+        data-title="Building a Clean Game Loop in JavaScript"
+        data-meta="By Gamify Team · June 14, 2026"
+      >
+        <p>
+          Learn how to structure a performant game loop, manage updates, and
+          render frames smoothly in browser-based games.
+        </p>
+        <p>
+          A game loop is the heartbeat of any interactive application. At its
+          simplest, it's a cycle that repeatedly processes input, updates game
+          state, and renders a frame — over and over, many times per second.
+        </p>
+        <p>
+          In the browser, <code>requestAnimationFrame</code> is the right tool
+          for this: it syncs your loop to the display's refresh rate and pauses
+          automatically when the tab isn't visible, saving battery and CPU.
+        </p>
+        <p>
+          To keep updates consistent regardless of frame rate, track the time
+          elapsed since the last frame (delta time) and use it to scale movement
+          and physics calculations. This prevents your game from running
+          differently on a 60Hz monitor versus a 144Hz one.
+        </p>
+      </article>
+
+      <article
+        id="dummy-2"
+        class="article-wrapper"
+        data-category="Design"
+        data-title="Designing Player Feedback That Feels Rewarding"
+        data-meta="By Gamify Team · June 16, 2026"
+      >
+        <p>
+          Explore how to use audio, visuals, and progression systems to make
+          every interaction in your game feel meaningful.
+        </p>
+        <p>
+          Good feedback tells the player, instantly and unambiguously, what just
+          happened as a result of their action. A satisfying hit needs a sound,
+          a flash, a screen shake — something that registers in under a tenth of
+          a second.
+        </p>
+        <p>
+          Layer your feedback: small actions get small cues, big achievements
+          get bigger, more elaborate ones. This creates a sense of escalation
+          and keeps minor feedback from feeling exhausting over a long play
+          session.
+        </p>
+        <p>
+          Don't underestimate restraint — feedback that's always maximal stops
+          feeling special. Save your biggest effects for the moments that matter
+          most.
+        </p>
+      </article>
+
+      <article
+        id="dummy-3"
+        class="article-wrapper"
+        data-category="Art"
+        data-title="Creating Expressive Character Art for Indie Games"
+        data-meta="By Gamify Team · June 18, 2026"
+      >
+        <p>
+          Simple art routines and palette tips for creating memorable pixel art
+          and concept visuals on a small team.
+        </p>
+        <p>
+          Limited time and a small team don't have to mean limited
+          expressiveness. A tight, well-chosen color palette can do more for
+          visual identity than a huge sprite sheet ever will.
+        </p>
+        <p>
+          Silhouette is king: if a character reads clearly as a flat black
+          shape, the details you add on top will only make it stronger. Test
+          your designs this way before refining them further.
+        </p>
+        <p>
+          Reuse base rigs and proportions across characters where you can —
+          consistency reads as intentional style, not as a shortcut, when it's
+          applied thoughtfully.
+        </p>
+      </article>
+
+      <article
+        id="dummy-4"
+        class="article-wrapper"
+        data-category="Engine: Unity"
+        data-title="Getting Started with Unity's Input System"
+        data-meta="By Gamify Team · June 19, 2026"
+      >
+        <p>
+          Step through how to configure Unity's modern input package for
+          controllers, keyboard, and touch controls.
+        </p>
+        <p>
+          Unity's Input System package replaces the old Input Manager with a
+          more flexible, action-based model. Instead of polling raw keys, you
+          define abstract "actions" like Jump or Move, then bind whatever
+          physical inputs you like to them.
+        </p>
+        <p>
+          This separation makes supporting multiple control schemes — keyboard
+          and mouse, gamepad, touch — much simpler, since your gameplay code
+          only ever talks to the action, never the specific device.
+        </p>
+        <p>
+          Use Input Action Assets to keep all your bindings organized in one
+          place, and take advantage of control schemes to let players (or your
+          game) swap input devices on the fly.
+        </p>
+      </article>
+
+      <article
+        id="dummy-5"
+        class="article-wrapper"
+        data-category="Sound"
+        data-title="Best Practices for Audio Implementation in Indie Games"
+        data-meta="By Gamify Team · June 20, 2026"
+      >
+        <p>
+          Discover how to balance music, sound effects, and interface audio for
+          a polished player experience.
+        </p>
+        <p>
+          Mix your audio in layers: music, ambient sound, sound effects, and UI
+          feedback should each occupy their own loudness range so nothing gets
+          buried during intense moments.
+        </p>
+        <p>
+          Vary repeated sound effects slightly in pitch and volume — even a tiny
+          random offset stops a frequently-triggered sound, like a footstep or a
+          gunshot, from becoming grating over a long session.
+        </p>
+        <p>
+          Always give players independent volume sliders for music, effects, and
+          dialogue. It's a small addition that goes a long way for accessibility
+          and personal comfort.
+        </p>
+      </article>
+
+      <article
+        id="dummy-6"
+        class="article-wrapper"
+        data-category="Design"
+        data-title="Using Color Theory to Guide Game UI Design"
+        data-meta="By Gamify Team · June 20, 2026"
+      >
+        <p>
+          Learn how to choose palettes, contrast, and hierarchy so your game UI
+          feels intuitive and visually consistent.
+        </p>
+        <p>
+          Color is one of the fastest ways to communicate meaning: reserve red
+          consistently for danger or damage, green for success or healing, and
+          don't dilute those associations elsewhere in your UI.
+        </p>
+        <p>
+          Contrast drives hierarchy. The most important element on screen — a
+          health bar, a critical warning — should have the highest contrast
+          against its background, while secondary information can recede.
+        </p>
+        <p>
+          Test your palette in grayscale. If you can still tell every element
+          apart by contrast alone, your design will hold up for colorblind
+          players too.
+        </p>
+      </article>
+
+      <div id="not-found" class="empty-state" style="display: none">
+        <p>This article couldn't be found. It may have been deleted.</p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var id = params.get("id");
+        var articles = document.querySelectorAll("article.article-wrapper");
+        var notFound = document.getElementById("not-found");
+        var match = null;
+
+        articles.forEach(function (article) {
+          if (article.id === id) {
+            match = article;
+          } else {
+            article.style.display = "none";
+          }
+        });
+
+        if (!match) {
+          notFound.style.display = "block";
+          return;
+        }
+
+        match.style.display = "block";
+
+        var heading = document.createElement("h1");
+        heading.textContent = match.dataset.title;
+
+        var category = document.createElement("span");
+        category.className = "article-card-category";
+        category.textContent = match.dataset.category;
+
+        var meta = document.createElement("p");
+        meta.className = "article-card-meta";
+        meta.textContent = match.dataset.meta;
+
+        match.prepend(meta);
+        match.prepend(heading);
+        match.prepend(category);
+
+        document.title = match.dataset.title + " - Gamify";
+      })();
+    </script>
+  </body>
+</html>

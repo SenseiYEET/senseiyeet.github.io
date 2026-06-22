@@ -1,0 +1,48 @@
+.display-wrapper {
+    max-width: 860px;
+    margin: 32px auto 0;
+    padding: 0 20px;
+}
+
+.article-wrapper {
+    background: #fff;
+    border: 1px solid #e8e8eb;
+    border-radius: 14px;
+    padding: 40px;
+    margin-top: 16px;
+}
+
+.article-wrapper h1 {
+    margin: 12px 0 6px;
+}
+
+.article-wrapper .article-card-meta {
+    margin-bottom: 24px;
+}
+
+#article-content {
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.owner-actions {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-edit {
+    display: inline-block;
+    background: #3b6ef6;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-edit:hover {
+    background: #1f3fae;
+}

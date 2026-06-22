@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Gamify — The Ultimate Resource for Game Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="./">
+          <img src="./images/Gamify-Logo.png" alt="Gamify logo" />
+          <span>Gamify</span>
+        </a>
+
+        <label class="nav-search">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search tutorials, articles, topics…"
+          />
+        </label>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="articles/article-search.html">Articles</a>
+          <a class="nav-link" href="login-signup/login-page.html">Account</a>
+          <a class="nav-cta" href="ai-chatbot/index.html">AI Chatbot</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <span class="eyebrow">Built by devs, for devs</span>
+          <h1>
+            The ultimate resource<br />for
+            <span class="accent">game development</span>
+          </h1>
+          <p>
+            Tutorials that actually teach, articles worth reading twice, and an
+            AI chatbot that gives you a straight answer — all in one place.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="login-signup/login-page.html"
+              >Start Creating Articles</a
+            >
+            <a class="btn-ghost" href="articles/article-search.html"
+              >Browse Articles</a
+            >
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <div class="num">500+</div>
+              <div class="label">Tutorials</div>
+            </div>
+            <div>
+              <div class="num">1.2k</div>
+              <div class="label">Articles</div>
+            </div>
+            <div>
+              <div class="num">24/7</div>
+              <div class="label">AI Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="wrap">
+          <div class="features-head">
+            <div class="kicker">What you'll find here</div>
+            <h2>Everything you need, nothing you don't</h2>
+          </div>
+
+          <div class="card-grid">
+            <a
+              class="feature-card tutorials"
+              href="articles/article-search.html"
+            >
+              <div>
+                <div class="card-tag">Learn</div>
+                <h3>Tutorials</h3>
+                <p>
+                  When the tutorials you've searched for aren't good enough
+                  because they're not as effective as you thought they were.
+                </p>
+              </div>
+              <div>
+                <div class="card-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" />
+                  </svg>
+                </div>
+                <span class="card-link"
+                  >Explore tutorials
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="feature-card articles"
+              href="articles/article-search.html"
+            >
+              <div>
+                <div class="card-tag">Read</div>
+                <h3>Articles</h3>
+                <p>
+                  When the articles just aren't reading the same way they once
+                  had in your childhood — written by people who actually ship
+                  games.
+                </p>
+              </div>
+              <div>
+                <div class="card-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M19 4H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12V6a2 2 0 0 0-2-2z"
+                    />
+                    <path d="M9 9h7M9 13h7M9 17h4" />
+                  </svg>
+                </div>
+                <span class="card-link"
+                  >Read articles
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <a class="feature-card ai" href="ai-chatbot/index.html">
+              <div>
+                <div class="card-tag">Ask</div>
+                <h3>AI Chatbot</h3>
+                <p>
+                  Even when other chatbots can't give you straight answers
+                  because of how dumb they actually are — don't worry about that
+                  here.
+                </p>
+              </div>
+              <div>
+                <div class="card-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2"
+                  >
+                    <rect x="4" y="8" width="16" height="11" rx="3" />
+                    <circle cx="9" cy="13.5" r="1.3" fill="#fff" />
+                    <circle cx="15" cy="13.5" r="1.3" fill="#fff" />
+                    <path d="M12 8V4M9 4h6" />
+                  </svg>
+                </div>
+                <span class="card-link"
+                  >Chat now
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-strip">
+      <div class="wrap">
+        <span>© 2026 Gamify</span>
+        <span>Made for game devs, by game devs</span>
+      </div>
+    </footer>
+  </body>
+</html>

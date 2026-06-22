@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- Source Codes By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamify - Sign Up</title>
+    <link rel="stylesheet" href="../shared/site-nav.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="register.js" defer></script>
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="wrap">
+        <a class="brand" href="../index.html">
+          <img src="../images/Gamify-Logo.png" alt="Gamify logo" />
+          <span>Gamify</span>
+        </a>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search tutorials, articles, topics…"
+          />
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="../articles/article-search.html"
+            >Articles</a
+          >
+          <a class="nav-link is-active" href="login-page.html">Account</a>
+          <a class="nav-cta" href="../ai-chatbot/index.html">AI Chatbot</a>
+        </nav>
+      </div>
+    </header>
+    <div class="login_page">
+      <div class="login_form">
+        <!-- Signup form container -->
+        <form>
+          <h3>Sign up with</h3>
+          <div class="login_option">
+            <!-- Google button (not yet wired up — see note below) -->
+            <div class="option option-disabled" title="Coming soon">
+              <a href="#" tabindex="-1" aria-disabled="true">
+                <img src="images/google.png" alt="Google" />
+                <span>Google</span>
+              </a>
+            </div>
+            <!-- Apple button (not yet wired up — see note below) -->
+            <div class="option option-disabled" title="Coming soon">
+              <a href="#" tabindex="-1" aria-disabled="true">
+                <img src="images/apple.svg" alt="Apple" />
+                <span>Apple</span>
+              </a>
+            </div>
+          </div>
+          <!-- Login option separator -->
+          <p class="separator">
+            <span>or</span>
+          </p>
+          <!-- Email input box -->
+          <div class="input_box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter email address"
+              required
+            />
+          </div>
+          <!-- Password input box -->
+          <div class="input_box">
+            <div class="password_title">
+              <label for="password">Password</label>
+            </div>
+            <input
+              type="password"
+              id="password"
+              placeholder="At least 6 characters"
+              minlength="6"
+              required
+            />
+          </div>
+          <p id="form-error" class="form-error"></p>
+          <!-- Signup button -->
+          <button type="submit" id="submit">Sign Up</button>
+          <p class="sign_up">
+            Already have an account? <a href="login-page.html">Log in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

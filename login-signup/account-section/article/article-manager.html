@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamify - My Articles</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../../shared/site-nav.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: #fff;
+      }
+      h1 {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .btn-primary {
+        background-color: #3b6ef6;
+        border-color: #3b6ef6;
+      }
+      .btn-primary:hover {
+        background-color: #1f3fae;
+        border-color: #1f3fae;
+      }
+      .article-row-card {
+        margin-bottom: 1rem;
+        border-radius: 14px;
+        border-color: #e7e7ee;
+      }
+      #manager-status {
+        min-height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="wrap">
+        <a class="brand" href="../account_menu.html">
+          <img src="../../../global-images/Gamify-Logo.png" alt="Gamify logo" />
+          <span>Gamify</span>
+        </a>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search tutorials, articles, topics…"
+          />
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="../../../articles/article-search.html"
+            >Articles</a
+          >
+          <a class="nav-link is-active" href="../account_menu.html">Account</a>
+          <a class="nav-link" href="../../../ai-chatbot/index.html"
+            >AI Chatbot</a
+          >
+          <span id="user-email" class="nav-user"></span>
+          <button id="logout-btn" class="nav-cta" style="border: none">
+            Log out
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container mt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>My Articles</h1>
+        <a
+          href="../../../articles/article-editor.html"
+          id="create-btn"
+          class="btn btn-primary"
+        >
+          + Create Article
+        </a>
+      </div>
+
+      <p id="manager-status" class="text-muted"></p>
+
+      <div id="article-list" class="row"></div>
+    </div>
+
+    <script type="module" src="article-manager.js"></script>
+  </body>
+</html>

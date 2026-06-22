@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamify - Account Menu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../shared/site-nav.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: #fff;
+      }
+      h1.text-center {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .btn-primary {
+        background-color: #3b6ef6;
+        border-color: #3b6ef6;
+      }
+      .btn-primary:hover {
+        background-color: #1f3fae;
+        border-color: #1f3fae;
+      }
+      .card {
+        border-radius: 14px;
+        border-color: #e7e7ee;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="wrap">
+        <a class="brand" href="../../index.html">
+          <img src="../../global-images/Gamify-Logo.png" alt="Gamify logo" />
+          <span>Gamify</span>
+        </a>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search tutorials, articles, topics…"
+          />
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link" href="../../articles/article-search.html"
+            >Articles</a
+          >
+          <a class="nav-link is-active" href="#">Account</a>
+          <a class="nav-link" href="../../ai-chatbot/index.html">AI Chatbot</a>
+          <span id="user-email" class="nav-user"></span>
+          <button id="logout-btn" class="nav-cta" style="border: none">
+            Log out
+          </button>
+        </nav>
+      </div>
+    </header>
+    <h1 class="text-center mt-3">Account Menu</h1>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">My Articles</h5>
+              <p class="card-text">
+                Create, edit, and manage the wiki articles you've written.
+              </p>
+              <a href="article/article-manager.html" class="btn btn-primary"
+                >Manage My Articles</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Browse Articles</h5>
+              <p class="card-text">
+                Search and read game development articles written by the Gamify
+                community.
+              </p>
+              <a
+                href="../../articles/article-search.html"
+                class="btn btn-primary"
+                >Browse Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">AI Chatbot</h5>
+              <p class="card-text">
+                Chat with Gamify AI for help with anything game development
+                related.
+              </p>
+              <a href="../../ai-chatbot/index.html" class="btn btn-primary"
+                >Access Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    import {requireLogin, wireLogoutButton} from "../../shared/auth-helpers.js";
+
+    requireLogin("../login-page.html", (user) => {
+      document.querySelector("#user-email").textContent = user.email || "";
+    });
+
+    wireLogoutButton("logout-btn", "../login-page.html");
+  </script>
+</html>

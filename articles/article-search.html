@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Gamify - Browse Articles</title>
+    <link rel="stylesheet" href="../shared/site-nav.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <div class="wrap">
+        <a class="brand" href="../index.html">
+          <img src="../images/Gamify-Logo.png" alt="Gamify logo" />
+          <span>Gamify</span>
+        </a>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search tutorials, articles, topics…"
+          />
+        </div>
+        <nav class="nav-links">
+          <a class="nav-link is-active" href="article-search.html">Articles</a>
+          <a class="nav-link" href="../login-signup/login-page.html">Account</a>
+          <a class="nav-cta" href="../ai-chatbot/index.html">AI Chatbot</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="search-page-wrapper">
+      <div class="search-header">
+        <h1>Browse articles</h1>
+        <a class="back-link" href="../index.html">&larr; Back to home</a>
+      </div>
+
+      <div class="search-bar-row">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search articles by title, category, or content…"
+        />
+        <select id="category-filter">
+          <option value="">All categories</option>
+          <option value="Programming">Programming</option>
+          <option value="Art">Art</option>
+          <option value="Sound">Sound</option>
+          <option value="Design">Design</option>
+          <option value="Engine: Unity">Engine: Unity</option>
+          <option value="Engine: Unreal">Engine: Unreal</option>
+          <option value="Engine: Godot">Engine: Godot</option>
+          <option value="Uncategorised">Uncategorised</option>
+        </select>
+      </div>
+
+      <p id="result-count" class="article-card-meta"></p>
+
+      <div id="loading" class="loading-state" style="display: none">
+        Loading articles…
+      </div>
+      <div id="empty" class="empty-state" style="display: none">
+        <p>No articles match your search yet.</p>
+        <p>
+          <a href="../login-signup/login-page.html">Log in</a> to write the
+          first one!
+        </p>
+      </div>
+      <div id="article-grid" class="article-grid">
+        <a class="article-card" href="article-template.html?id=dummy-1">
+          <span class="article-card-category">Programming</span>
+          <h3>Building a Clean Game Loop in JavaScript</h3>
+          <p>
+            Learn how to structure a performant game loop, manage updates, and
+            render frames smoothly in browser-based games.
+          </p>
+          <div class="article-card-meta">By Gamify Team</div>
+        </a>
+        <a class="article-card" href="article-template.html?id=dummy-2">
+          <span class="article-card-category">Design</span>
+          <h3>Designing Player Feedback That Feels Rewarding</h3>
+          <p>
+            Explore how to use audio, visuals, and progression systems to make
+            every interaction in your game feel meaningful.
+          </p>
+          <div class="article-card-meta">By Gamify Team</div>
+        </a>
+        <a class="article-card" href="article-template.html?id=dummy-3">
+          <span class="article-card-category">Art</span>
+          <h3>Creating Expressive Character Art for Indie Games</h3>
+          <p>
+            Simple art routines and palette tips for creating memorable pixel
+            art and concept visuals on a small team.
+          </p>
+          <div class="article-card-meta">By Gamify Team</div>
+        </a>
+        <a class="article-card" href="article-template.html?id=dummy-4">
+          <span class="article-card-category">Engine: Unity</span>
+          <h3>Getting Started with Unity's Input System</h3>
+          <p>
+            Step through how to configure Unity's modern input package for
+            controllers, keyboard, and touch controls.
+          </p>
+          <div class="article-card-meta">By Gamify Team</div>
+        </a>
+        <a class="article-card" href="article-template.html?id=dummy-5">
+          <span class="article-card-category">Sound</span>
+          <h3>Best Practices for Audio Implementation in Indie Games</h3>
+          <p>
+            Discover how to balance music, sound effects, and interface audio
+            for a polished player experience.
+          </p>
+          <div class="article-card-meta">By Gamify Team</div>
+        </a>
+        <a class="article-card" href="article-template.html?id=dummy-6">
+          <span class="article-card-category">Design</span>
+          <h3>Using Color Theory to Guide Game UI Design</h3>
+          <p>
+            Learn how to choose palettes, contrast, and hierarchy so your game
+            UI feels intuitive and visually consistent.
+          </p>
+          <div class="article-card-meta">By Gamify Team</div>
+        </a>
+      </div>
+    </div>
+
+    <script type="module" src="./js/article-search.js"></script>
+  </body>
+</html>
