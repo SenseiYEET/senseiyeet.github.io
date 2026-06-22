@@ -50,6 +50,7 @@ const DUMMY_ARTICLES = [
     id: "dummy-1",
     title: "Building a Clean Game Loop in JavaScript",
     category: "Programming",
+    externalUrl: "https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame",
     contentHtml:
       "<p>Learn how to structure a performant game loop, manage updates, and render frames smoothly in browser-based games.</p>",
     contentDelta: JSON.stringify({}),
@@ -62,6 +63,7 @@ const DUMMY_ARTICLES = [
     id: "dummy-2",
     title: "Designing Player Feedback That Feels Rewarding",
     category: "Design",
+    externalUrl: "https://www.gamasutra.com/",
     contentHtml:
       "<p>Explore how to use audio, visuals, and progression systems to make every interaction in your game feel meaningful.</p>",
     contentDelta: JSON.stringify({}),
@@ -74,6 +76,7 @@ const DUMMY_ARTICLES = [
     id: "dummy-3",
     title: "Creating Expressive Character Art for Indie Games",
     category: "Art",
+    externalUrl: "https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ",
     contentHtml:
       "<p>Simple art routines and palette tips for creating memorable pixel art and concept visuals on a small team.</p>",
     contentDelta: JSON.stringify({}),
@@ -86,6 +89,7 @@ const DUMMY_ARTICLES = [
     id: "dummy-4",
     title: "Getting Started with Unity's Input System",
     category: "Engine: Unity",
+    externalUrl: "https://unity.com/learn",
     contentHtml:
       "<p>Step through how to configure Unity's modern input package for controllers, keyboard, and touch controls.</p>",
     contentDelta: JSON.stringify({}),
@@ -98,6 +102,7 @@ const DUMMY_ARTICLES = [
     id: "dummy-5",
     title: "Best Practices for Audio Implementation in Indie Games",
     category: "Sound",
+    externalUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API",
     contentHtml:
       "<p>Discover how to balance music, sound effects, and interface audio for a polished player experience.</p>",
     contentDelta: JSON.stringify({}),
@@ -110,6 +115,7 @@ const DUMMY_ARTICLES = [
     id: "dummy-6",
     title: "Using Color Theory to Guide Game UI Design",
     category: "Design",
+    externalUrl: "https://www.smashingmagazine.com/",
     contentHtml:
       "<p>Learn how to choose palettes, contrast, and hierarchy so your game UI feels intuitive and visually consistent.</p>",
     contentDelta: JSON.stringify({}),

@@ -17,12 +17,7 @@
           <img src="../images/Gamify-Logo.png" alt="Gamify logo" />
           <span>Gamify</span>
         </a>
-        <div class="search-bar">
-          <input
-            type="text"
-            placeholder="Search tutorials, articles, topics…"
-          />
-        </div>
+
         <nav class="nav-links">
           <a class="nav-link is-active" href="article-search.html">Articles</a>
           <a class="nav-link" href="../login-signup/login-page.html">Account</a>
@@ -34,94 +29,153 @@
     <div class="search-page-wrapper">
       <div class="search-header">
         <h1>Browse articles</h1>
+        <!---Note: &larr; is the backspace icon to back to the homepage--->
         <a class="back-link" href="../index.html">&larr; Back to home</a>
       </div>
-
-      <div class="search-bar-row">
-        <input
-          id="search-input"
-          type="search"
-          placeholder="Search articles by title, category, or content…"
-        />
-        <select id="category-filter">
-          <option value="">All categories</option>
-          <option value="Programming">Programming</option>
-          <option value="Art">Art</option>
-          <option value="Sound">Sound</option>
-          <option value="Design">Design</option>
-          <option value="Engine: Unity">Engine: Unity</option>
-          <option value="Engine: Unreal">Engine: Unreal</option>
-          <option value="Engine: Godot">Engine: Godot</option>
-          <option value="Uncategorised">Uncategorised</option>
-        </select>
-      </div>
-
-      <p id="result-count" class="article-card-meta"></p>
-
-      <div id="loading" class="loading-state" style="display: none">
-        Loading articles…
-      </div>
-      <div id="empty" class="empty-state" style="display: none">
-        <p>No articles match your search yet.</p>
-        <p>
-          <a href="../login-signup/login-page.html">Log in</a> to write the
-          first one!
-        </p>
-      </div>
       <div id="article-grid" class="article-grid">
-        <a class="article-card" href="article-template.html?id=dummy-1">
+        <a
+          class="article-card"
+          href="https://www.gamedeveloper.com/programming/what-is-game-programming-and-how-do-you-become-a-game-programmer-"
+        >
           <span class="article-card-category">Programming</span>
-          <h3>Building a Clean Game Loop in JavaScript</h3>
+          <h3>What is game programming?</h3>
           <p>
-            Learn how to structure a performant game loop, manage updates, and
-            render frames smoothly in browser-based games.
+            Stepping into the world of game programming can be daunting. This
+            article explains the basics of game programming, as well as what
+            tools and resources you can use to get started.
           </p>
-          <div class="article-card-meta">By Gamify Team</div>
+          <div class="article-card-meta">Game Developer</div>
         </a>
-        <a class="article-card" href="article-template.html?id=dummy-2">
-          <span class="article-card-category">Design</span>
-          <h3>Designing Player Feedback That Feels Rewarding</h3>
+        <a
+          class="article-card"
+          href="https://docs.unity3d.com/Manual/index.html?ampDeviceId=b5964bfd-ee47-44fa-9a79-0e3166fef508&ampSessionId=1782123785630&ampTimestamp=1782211311379"
+        >
+          <span class="article-card-category">Unity</span>
+          <h3>Unity 6.5 User Manual</h3>
           <p>
-            Explore how to use audio, visuals, and progression systems to make
-            every interaction in your game feel meaningful.
+            Unity 6.5 is the latest release of the next generation of the Unity
+            Engine. It combines the latest technologies and tools to deliver
+            high-quality, high-performance experiences for all supported
+            platforms.
           </p>
-          <div class="article-card-meta">By Gamify Team</div>
+          <div class="article-card-meta">Unity Documentation</div>
         </a>
-        <a class="article-card" href="article-template.html?id=dummy-3">
-          <span class="article-card-category">Art</span>
-          <h3>Creating Expressive Character Art for Indie Games</h3>
+        <a class="article-card" href="https://docs.godotengine.org/en/stable/">
+          <span class="article-card-category">Godot</span>
+          <h3>Godot Game Engine Reference</h3>
           <p>
-            Simple art routines and palette tips for creating memorable pixel
-            art and concept visuals on a small team.
+            Welcome to the official documentation of Godot Engine, the free and
+            open source community-driven 2D and 3D game engine!
           </p>
-          <div class="article-card-meta">By Gamify Team</div>
+          <div class="article-card-meta">Godot Engine</div>
         </a>
-        <a class="article-card" href="article-template.html?id=dummy-4">
-          <span class="article-card-category">Engine: Unity</span>
-          <h3>Getting Started with Unity's Input System</h3>
-          <p>
-            Step through how to configure Unity's modern input package for
-            controllers, keyboard, and touch controls.
-          </p>
-          <div class="article-card-meta">By Gamify Team</div>
+        <a
+          class="article-card"
+          href="https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-5-8-documentation"
+        >
+          <span class="article-card-category">Unreal Engine</span>
+          <h3>Unreal Engine 5 Documentation</h3>
+          <p>Complete resources for learning to use Unreal Engine 5</p>
+          <div class="article-card-meta">Unreal Engine</div>
         </a>
-        <a class="article-card" href="article-template.html?id=dummy-5">
-          <span class="article-card-category">Sound</span>
-          <h3>Best Practices for Audio Implementation in Indie Games</h3>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=ZtTGGllR36o"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>How To Make Game Art</h3>
           <p>
-            Discover how to balance music, sound effects, and interface audio
-            for a polished player experience.
+            Learn how to create art for your games with my game art act, useful
+            for game devs, artists, pixel artists and more!
           </p>
-          <div class="article-card-meta">By Gamify Team</div>
+          <div class="article-card-meta">Saultoons - YouTube</div>
         </a>
-        <a class="article-card" href="article-template.html?id=dummy-6">
-          <span class="article-card-category">Design</span>
-          <h3>Using Color Theory to Guide Game UI Design</h3>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=Kux_LvRl57U"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>How To Make Sound Effects for Games</h3>
           <p>
-            Learn how to choose palettes, contrast, and hierarchy so your game
-            UI feels intuitive and visually consistent.
+            This is a sound design tutorial for beginners covering all the
+            basics from recording to editing (using Audacity). You'll learn how
+            to create quality sound effects for video games.
           </p>
-          <div class="article-card-meta">By Gamify Team</div>
+          <div class="article-card-meta">Jonas Tyroller - Youtube</div>
+        </a>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=DKmrBUpd0yw"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>The ONLY Pixel Art Guide You Need (Beginner to Advanced)</h3>
+          <p>
+            This is a sound design tutorial for beginners covering all the
+            basics from recording to editing (using Audacity). You'll learn how
+            to create quality sound effects for video games.
+          </p>
+          <div class="article-card-meta">Juniper Dev - Youtube</div>
+        </a>
+        <a class="article-card" href="https://youtu.be/n3fjdwJ5eQk">
+          <span class="article-card-category">Tutorial</span>
+          <h3>The Only Game Development Advice You Need</h3>
+          <p>
+            This advises developers to treat playtesting feedback as a indicator
+            of frustration within the overall game rather than a to-do list.
+          </p>
+          <div class="article-card-meta">Jonas Tyroller - Youtube</div>
+        </a>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=Kux_LvRl57U"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>How To Make Sound Effects for Games</h3>
+          <p>
+            This is a sound design tutorial for beginners covering all the
+            basics from recording to editing (using Audacity). You'll learn how
+            to create quality sound effects for video games.
+          </p>
+          <div class="article-card-meta">Jonas Tyroller - Youtube</div>
+        </a>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=Kux_LvRl57U"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>How To Make Sound Effects for Games</h3>
+          <p>
+            This is a sound design tutorial for beginners covering all the
+            basics from recording to editing (using Audacity). You'll learn how
+            to create quality sound effects for video games.
+          </p>
+          <div class="article-card-meta">Jonas Tyroller - Youtube</div>
+        </a>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=Kux_LvRl57U"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>How To Make Sound Effects for Games</h3>
+          <p>
+            This is a sound design tutorial for beginners covering all the
+            basics from recording to editing (using Audacity). You'll learn how
+            to create quality sound effects for video games.
+          </p>
+          <div class="article-card-meta">Jonas Tyroller - Youtube</div>
+        </a>
+        <a
+          class="article-card"
+          href="https://www.youtube.com/watch?v=Kux_LvRl57U"
+        >
+          <span class="article-card-category">Tutorial</span>
+          <h3>How To Make Sound Effects for Games</h3>
+          <p>
+            This is a sound design tutorial for beginners covering all the
+            basics from recording to editing (using Audacity). You'll learn how
+            to create quality sound effects for video games.
+          </p>
+          <div class="article-card-meta">Jonas Tyroller - Youtube</div>
         </a>
       </div>
     </div>

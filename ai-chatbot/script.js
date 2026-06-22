@@ -1,18 +1,3 @@
-// ============================================================================
-// SECURITY NOTE — read before deploying this publicly
-// ============================================================================
-// The API_KEY below calls the Gemini API directly from the browser. Anyone
-// who views this page's source (or your network tab) can read it and use it
-// themselves, potentially running up your bill or exhausting your quota.
-//
-// For a real deployment, move this call behind a small backend instead:
-//   browser -> your server (holds the real key, e.g. as an env var)
-//            -> Gemini API
-// Firebase Cloud Functions is a natural fit here since you're already using
-// Firebase elsewhere in this project. Until that's in place, treat this key
-// as effectively public and keep an eye on usage/quotas in Google AI Studio.
-// ============================================================================
-
 const container = document.querySelector(".container");
 const chatsContainer = document.querySelector(".chats-container");
 const promptForm = document.querySelector(".prompt-form");
@@ -22,14 +7,12 @@ const fileUploadWrapper = promptForm.querySelector(".file-upload-wrapper");
 const themeToggle = document.querySelector("#theme-toggle-btn");
 
 // API Setup
-const API_KEY = "AQ.Ab8RN6Lu2pqqETaw86_uq7a6jTTCDZBY8Sr0dfAZJaU5jHKWUw";
-// NOTE: the original code referenced "gemini-3.1-flash-lite", which is not a
-// real published Gemini model name and would 404. Using a real current
-// model id instead.
+// TODO: Replace with your valid API key from https://aistudio.google.com/app/apikey
+const API_KEY = "AQ.Ab8RN6IhuVdH2KkBF-QviktbesJuoek0hxiB4BpARv-Zc4y_kg";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${API_KEY}`;
 
-// Give the model some grounding so it actually behaves like "Gamify AI",
-// a game-development-focused assistant, rather than a generic chatbot.
+
+// Some system context for the system
 const SYSTEM_CONTEXT = {
   role: "user",
   parts: [{
@@ -146,11 +129,6 @@ const handleFormSubmit = (event) => {
   document.body.classList.add("bot-responding", "chats-active");
   fileUploadWrapper.classList.remove("active", "img-attached", "file-attached");
 
-  // Build the user message bubble, including any attached file preview.
-  // (Fixed: the original template literal used curly typographic quotes
-  // and angle brackets — ‹p› instead of <p> — which is invalid HTML/JS and
-  // would silently break the whole script the first time someone sent a
-  // message with a file attached.)
   const attachmentHtml = userData.file.data
     ? userData.file.isImage
       ? `<img src="data:${userData.file.mime_type};base64,${userData.file.data}" class="img-attachment" />`

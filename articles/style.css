@@ -1,6 +1,6 @@
 body {
     background-color: #ffffff;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     padding: 0 0 60px;
     margin: 0;
 }
@@ -189,29 +189,7 @@ body {
     background: #1f3fae;
 }
 
-.search-bar-row {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-}
-
-.search-bar-row input[type="search"] {
-    flex: 1;
-    min-width: 220px;
-    padding: 12px 14px;
-    font-size: 15px;
-    border: 1px solid #d6d6dc;
-    border-radius: 10px;
-}
-
-.search-bar-row select {
-    padding: 12px 14px;
-    font-size: 15px;
-    border: 1px solid #d6d6dc;
-    border-radius: 10px;
-    background: #fff;
-}
+/* Search row removed — styles cleaned up */
 
 .article-grid {
     display: grid;
