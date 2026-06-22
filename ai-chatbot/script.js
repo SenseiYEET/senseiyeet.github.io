@@ -11,7 +11,6 @@ const themeToggle = document.querySelector("#theme-toggle-btn");
 const API_KEY = "AQ.Ab8RN6ILtRcqM-8btCxjOdbjFmT6haDNnl4CcXkc-ja0Fj-tmg";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${API_KEY}`;
 
-
 // Some system context for the system
 const SYSTEM_CONTEXT = {
   role: "user",
@@ -21,6 +20,7 @@ const SYSTEM_CONTEXT = {
       "game art, sound design, and related topics. Keep answers practical and concise unless asked for depth.",
   }],
 };
+
 const SYSTEM_ACK = {
   role: "model",
   parts: [{ text: "Understood — I'm ready to help with game development questions." }],
