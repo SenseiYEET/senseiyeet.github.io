@@ -16,6 +16,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+// Creating the password for the account
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   setError("");

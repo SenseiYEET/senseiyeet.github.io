@@ -5,80 +5,15 @@ body {
     margin: 0;
 }
 
-.editor-wrapper,
 .search-page-wrapper {
     padding-left: 40px;
     padding-right: 40px;
 }
 
-.editor-wrapper h1,
 .search-header h1 {
     font-family: "Space Grotesk", sans-serif;
 }
 
-.editor-wrapper {
-    background: #ffffff;
-    max-width: 1100px;
-    margin: 32px auto 0;
-    padding: 40px;
-    border: 1px solid #e8e8eb;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Style the custom save button */
-#save-btn {
-    margin-top: 20px;
-    background: #3b6ef6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#save-btn:hover {
-    background: #1f3fae;
-}
-
-/* Style the custom delete button */
-#delete-btn {
-    margin-top: 20px;
-    background: #ff3838;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#delete-btn:hover {
-    background: #f94c4c;
-}
-
-/* Style the custom preview button */
-#preview-btn {
-    margin-top: 20px;
-    background: #07c013;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#preview-btn:hover {
-    background: #18dc25;
-}
-
-/* Download button removed — styles cleaned up */
-/* --- New styles for editor meta fields, back link, status (added during rebuild) --- */
 .back-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -89,13 +24,6 @@ body {
 
 .back-link:hover {
     text-decoration: underline;
-}
-
-.editor-meta {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
 }
 
 .meta-field {
@@ -131,48 +59,6 @@ body {
     border-color: #3b6ef6;
 }
 
-#editor {
-    min-height: 320px;
-    background: #fff;
-}
-
-.editor-actions {
-    display: flex;
-    gap: 12px;
-}
-
-.editor-status {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #555;
-    min-height: 20px;
-}
-
-/* Search page additions */
-.search-page-wrapper {
-    max-width: 1100px;
-    margin: 32px auto 0;
-}
-
-.search-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-}
-
-.search-header h1 {
-    margin: 0;
-}
-
-.search-header-actions {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
 .generate-link {
     display: inline-block;
     padding: 8px 14px;
@@ -189,8 +75,7 @@ body {
     background: #1f3fae;
 }
 
-/* Search row removed — styles cleaned up */
-
+/* Article Grids */
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -210,9 +95,10 @@ body {
     transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 
+/* Article Card Animiation */
 .article-card:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .article-card-category {

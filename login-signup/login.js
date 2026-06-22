@@ -17,6 +17,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+// Login in with email and password
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   setError("");
@@ -43,6 +44,7 @@ function setError(message) {
   errorEl.textContent = message;
 }
 
+// Sends out a friendly error when your email or password is wrong
 function friendlyError(error) {
   switch (error.code) {
     case "auth/invalid-email":

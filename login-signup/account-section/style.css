@@ -1,0 +1,25 @@
+body {
+        font-family: "Space Grotesk", sans-serif;
+        background: #fff;
+      }
+      h1.text-center {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .btn-primary {
+        background-color: #3b6ef6;
+        border-color: #3b6ef6;
+      }
+      .btn-primary:hover {
+        background-color: #1f3fae;
+        border-color: #1f3fae;
+      }
+      .card {
+        border-radius: 14px;
+        border-color: #e7e7ee;
+      }
+      .card-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+        object-fit: contain;
+      }

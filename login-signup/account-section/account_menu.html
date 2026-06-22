@@ -16,33 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../shared/site-nav.css" />
-    <style>
-      body {
-        font-family: "Space Grotesk", sans-serif;
-        background: #fff;
-      }
-      h1.text-center {
-        font-family: "Space Grotesk", sans-serif;
-      }
-      .btn-primary {
-        background-color: #3b6ef6;
-        border-color: #3b6ef6;
-      }
-      .btn-primary:hover {
-        background-color: #1f3fae;
-        border-color: #1f3fae;
-      }
-      .card {
-        border-radius: 14px;
-        border-color: #e7e7ee;
-      }
-      .card-icon {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 12px;
-        object-fit: contain;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-nav">
@@ -65,7 +39,9 @@
         </nav>
       </div>
     </header>
+    <br />
     <h1 class="text-center mt-3">Account Menu</h1>
+    <br />
     <div class="container">
       <div class="row mt-3">
         <div class="col-12 col-md-6 mb-3">
@@ -78,9 +54,11 @@
               />
               <h5 class="card-title">Browse Articles</h5>
               <p class="card-text">
-                Search and read game development articles written by the Gamify
-                community.
+                Search and read game development resources from aross the entire
+                internet.
               </p>
+              <br />
+
               <a
                 href="../../articles/article-search.html"
                 class="btn btn-primary"
@@ -102,6 +80,7 @@
                 Chat with Gamify AI for help with anything game development
                 related.
               </p>
+              <br />
               <a href="../../ai-chatbot/index.html" class="btn btn-primary"
                 >Access Now</a
               >
@@ -111,13 +90,5 @@
       </div>
     </div>
   </body>
-  <script type="module">
-    import {requireLogin, wireLogoutButton} from "../../shared/auth-helpers.js";
-
-    requireLogin("../login-page.html", (user) => {
-      document.querySelector("#user-email").textContent = user.email || "";
-    });
-
-    wireLogoutButton("logout-btn", "../login-page.html");
-  </script>
+  <script type="module" src="script.js" defer></script>
 </html>

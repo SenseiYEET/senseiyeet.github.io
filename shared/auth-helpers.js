@@ -1,31 +1,17 @@
-// ============================================================================
-// Shared authentication helpers
-// ============================================================================
-// Used by any page that needs to know who's logged in, redirect guests away
-// from protected pages, or provide a working logout button.
-// ============================================================================
-
 import { auth } from "./firebase-config.js";
 import {
   onAuthStateChanged,
   signOut,
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
-/**
- * Calls onReady(user) once Firebase has resolved the current auth state.
- * user will be null if no one is logged in.
- */
+// Making sure that the user's always authenticated
 export function watchAuthState(onReady) {
   onAuthStateChanged(auth, (user) => {
     onReady(user);
   });
 }
 
-/**
- * Redirects to the login page if no one is logged in.
- * Call this at the top of any page that requires a logged-in user.
- * loginPath should be a relative path to login-page.html from the calling page.
- */
+// Checks if the user needs to login in before accessing the web page
 export function requireLogin(loginPath, onLoggedIn) {
   watchAuthState((user) => {
     if (!user) {
@@ -36,9 +22,7 @@ export function requireLogin(loginPath, onLoggedIn) {
   });
 }
 
-/**
- * Wires up a logout button by id. Redirects to redirectPath after signing out.
- */
+// Allows user to logout from the website
 export function wireLogoutButton(buttonId, redirectPath) {
   const btn = document.getElementById(buttonId);
   if (!btn) return;

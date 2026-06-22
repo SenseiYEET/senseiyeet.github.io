@@ -7,8 +7,7 @@ const fileUploadWrapper = promptForm.querySelector(".file-upload-wrapper");
 const themeToggle = document.querySelector("#theme-toggle-btn");
 
 // API Setup
-// TODO: Replace with your valid API key from https://aistudio.google.com/app/apikey
-const API_KEY = "AQ.Ab8RN6ILtRcqM-8btCxjOdbjFmT6haDNnl4CcXkc-ja0Fj-tmg";
+const API_KEY = "AQ.Ab8RN6Kx0FrWHNkgFbEKkrLMwZCbqdu9wLzDvvNGzJ4IfLRO5Q";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${API_KEY}`;
 
 // Some system context for the system

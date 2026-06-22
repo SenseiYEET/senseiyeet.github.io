@@ -1,6 +1,7 @@
 /* Google Fonts Link */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 /* Resetting default styling and setting font-family */
+
 * {
     margin: 0;
     padding: 0;
@@ -80,6 +81,7 @@ body {
     position: relative;
     margin-bottom: 24px;
 }
+
 /* Login option separator styling */
 .login_form .separator span {
     background: #fff;
@@ -102,6 +104,7 @@ form .input_box label {
     font-weight: 500;
     margin-bottom: 8px;
 }
+
 /* Input field styling */
 form .input_box input {
     width: 100%;
